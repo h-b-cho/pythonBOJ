@@ -31,7 +31,11 @@ def recur(x, y, N):
                 recur(x+N//2, y,      N//2) # 3사분면
                 recur(x+N//2, y+N//2, N//2) # 4사분면
                 return
-    if 
-    else 
+    if check == '0':
+        answer += '0'
+    else:
+        answer += '1'
+    return
 
 recur(0, 0, N)
+print(answer)
