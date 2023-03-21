@@ -8,7 +8,7 @@ perms = []
 for p in permutations(A, N):
     perms.append(p)
 
-currMax = -1e999
+currMax = -1e99
 tmp = 0
 
 for p in perms:
@@ -25,7 +25,7 @@ import sys
 input = sys.stdin.readline
 N = int(input())
 A = list(map(int, input().split()))
-currMax = -1e999
+currMax = -1e99
 tmp = 0
 arr = []
 visited = [0]*N

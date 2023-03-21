@@ -19,15 +19,15 @@ c = int(input())
 ## 여러 라인 입력받아야 할 경우 - 문제 풀이 상 총 몇 줄의 입력값인지 고정적이며 그걸 리스트로 보관할 때:
 arr = []
 for _ in range(9): # 9줄 고정일 때
-    num = int(input())
-    arr.append(num)
+	num = int(input())
+	arr.append(num)
 
 arr = list(int(input()) for _ in range(9))
 
 # 여러 라인 입력받아야 할 경우 - 입력값의 맨 앞에 테스트케이스의 갯수 주어질 때:
 c = int(input())
 for _ in range(c):
-  arr = list(map(int, input().split()))
+	arr = list(map(int, input().split()))
 #
 c = int(input())
 arr = list(map(int, input().split()) for _ in range(c))

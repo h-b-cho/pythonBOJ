@@ -11,10 +11,10 @@ for _ in range(M):
     graph[u][v] = graph[v][u] = 1
 
 def dfs(v):
-  visited[v] = 1
-  for i in range(1, N+1):
-    if visited[i]==0 and graph[v][i]==1:
-        dfs(i)
+    visited[v] = 1
+    for i in range(1, N+1):
+        if visited[i]==0 and graph[v][i]==1:
+            dfs(i)
 
 cnt = 0
 

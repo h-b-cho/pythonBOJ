@@ -2,7 +2,7 @@ import sys
 input = sys.stdin.readline
 N = int(input())
 A = list(map(int, input().split()))
-currMax = -1e999
+currMax = -1e99
 visited = [0]*N
 arr = []
 sum = 0
