@@ -1,4 +1,4 @@
-1. 8*8 격자판에서 각 열에 퀸을 1개씩 배치하는 조합을 모두 프린트
+# 1. 8*8 격자판에서 각 열에 퀸을 1개씩 배치하는 조합을 모두 프린트
 pos = [0]*8
 
 def put()->None:
@@ -16,7 +16,7 @@ def set(n:int)->None:
 
 set(0)
 
-2. 8*8 격자판에서 각 열에 퀸을 1개씩 배치하는 조합 중 이미 퀸이 배치된 열에 flag를 꽂아 열이 겹치치 않게 배치하는 조합을 모두 프린트
+# 2. 8*8 격자판에서 각 열에 퀸을 1개씩 배치하는 조합 중 이미 퀸이 배치된 열에 flag를 꽂아 열이 겹치치 않게 배치하는 조합을 모두 프린트
 pos = [0]*8
 flag = [False]*8
 
@@ -38,7 +38,7 @@ def set(n:int)->None:
 
 set(0)
 
-3. 8*8 격자판에서 이미 퀸이 1개 놓인 열, 행, 대각선에 flag를 꽂아 그 열, 행, 대각선에 다른 퀸이 겹치치 않게 배치하는 조합을 모두 프린트
+# 3. 8*8 격자판에서 이미 퀸이 1개 놓인 열, 행, 대각선에 flag를 꽂아 그 열, 행, 대각선에 다른 퀸이 겹치치 않게 배치하는 조합을 모두 프린트
 pos = [0]*8
 flag_a = [False]*8
 flag_b = [False]*15
@@ -52,8 +52,8 @@ def put():
 def set(n:int):
     for j in range(8):
         if ( not flag_a[j]
-             and not flag_b[n+j]
-             and not flag_c[n-j+7] ):
+            and not flag_b[n+j]
+            and not flag_c[n-j+7] ):
             pos[n] = j
             if n==7:
                 put()
@@ -64,7 +64,7 @@ def set(n:int):
 
 set(0)
 
-4. 위를 입력값 N에 따른 N*N 격자판 버전으로
+# 4. 위를 입력값 N에 따른 N*N 격자판 버전으로
 import sys  
 input = sys.stdin.readline
 N = int(input())
@@ -81,8 +81,8 @@ def put(end):
 def set(n, end):
     for j in range(end):
         if ( not flag_a[j]
-             and not flag_b[n+j]
-             and not flag_c[n-j+end-1] ):
+            and not flag_b[n+j]
+            and not flag_c[n-j+end-1] ):
             pos[n] = j
             if n==end-1:
                 put(end)
@@ -93,7 +93,7 @@ def set(n, end):
 
 set(0, N)
 
-5. 경우의 수 count를 프린트
+# 5. 경우의 수 count를 프린트
 import sys  
 input = sys.stdin.readline
 N = int(input())
@@ -107,8 +107,8 @@ def set(n, end):
     global count
     for j in range(end):
         if ( not flag_a[j]
-             and not flag_b[n+j]
-             and not flag_c[n-j+end-1] ):
+            and not flag_b[n+j]
+            and not flag_c[n-j+end-1] ):
             pos[n] = j
             if n==end-1:
                 count+=1
