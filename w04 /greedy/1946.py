@@ -17,6 +17,5 @@ for _ in range(T):
     for j in range(len(rank)):
         if temp > rank[j][1]:
             cnt += 1
+            print(rank[j])
             temp = rank[j][1]
-
-    print(cnt)
